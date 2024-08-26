@@ -4,12 +4,13 @@ Array.prototype.mySome = function(callback) {
     const length = this.length;
     for (let i = 0; i < length; i++) {
         if (callback(this[i])) {
-            return 0;
+            return true;
         }
     }
+    return false;
 }
 const mycb = (num) => {
-    if (num != 2 === 0)
+    if (num != 2 == 0)
         return true
     else
         return false
